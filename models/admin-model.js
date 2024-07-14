@@ -1,7 +1,7 @@
-const mongoose=require("moongoose");
+const mongoose=require("mongoose");
 
-const ownerSchema= new mongoose.Schema({
-      fullName:{
+const adminSchema= new mongoose.Schema({
+      name:{
         type:String,
         minLength:3,
         trim:true,
@@ -15,18 +15,20 @@ const ownerSchema= new mongoose.Schema({
         type:String,
         required:true,
       },
+      isAdmin:{
+        type:Boolean,
+      },
       products:{
         type:Array,
         default:[],
       },
       picture:{
         type:String,
-        required:true,
+        
       },
       gstin:{
         type:String,
-        default:[],
       }
 });
 
-module.exports=mongoose.model("owner",ownerSchema);
+module.exports=mongoose.model("admin",adminSchema);

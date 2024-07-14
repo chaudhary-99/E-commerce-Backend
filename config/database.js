@@ -1,4 +1,4 @@
-const mongoose=require("moongoose");
+const mongoose=require("mongoose");
 require('dotenv').config();
 
 exports.connect=()=>{
@@ -6,7 +6,7 @@ exports.connect=()=>{
         useNewUrlParser:true,
         useUnifiedTopology:true
     })
-    .then(()=>{console.log("DB connected successfully")})
+    .then(()=>{console.log(`DB connected successfully`)})
     .catch((err)=>{
         console.log("DB CONNECTION ISSUES");
         console.error(err);

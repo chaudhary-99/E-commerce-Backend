@@ -1,4 +1,4 @@
-const mongoose=require("moongoose");
+const mongoose=require("mongoose");
 const { boolean } = require("webidl-conversions");
 const userSchema= new mongoose.Schema({
       fullName:{
@@ -17,13 +17,10 @@ const userSchema= new mongoose.Schema({
         type:Array,
         default:[],
       },
-      isAdmin:{
-        type:boolean,
-        required:true,
-      },
+    
       picture:{
         type:String,
-        required:true,d
+        required:true,
       },
       orders:{
         type:Array,

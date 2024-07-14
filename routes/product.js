@@ -2,11 +2,11 @@ const express=require("express");
 const router=express.Router();
 
 
-const {adminRouter, usersRouter, productsRouter}=require("../controllers/productController");
+const {admin, users, products}=require("../controllers/productController");
 
 //api routes
 
-router.post("/admin",adminRouter);
-router.post("/users",usersRouter);
-router.post("/products",productsRouter);
+router.post("/admin",admin);
+// router.post("/users",users);
+// router.post("/products",products);
 module.exports=router;

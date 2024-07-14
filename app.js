@@ -14,8 +14,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname,"public")));
 app.set("view engine","ejs");
 
-// const Product=require("./routes/product");
-// app.use("/api/v1",Product);
+const Product=require("./routes/product");
+app.use("/api/v1",Product);
 
 
 app.get("/",(req,res)=>{
